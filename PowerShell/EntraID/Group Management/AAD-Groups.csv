@@ -1,0 +1,4 @@
+DisplayName,MailNickname,Description,MailEnabled,SecurityEnabled,,
+Test group 1,testgroup1,Test group 1,FALSE,TRUE,,
+Test group 2,testgroup2,Test group 2,FALSE,TRUE,,
+Test group 3,testgroup3,Test group 3,FALSE,TRUE,,
