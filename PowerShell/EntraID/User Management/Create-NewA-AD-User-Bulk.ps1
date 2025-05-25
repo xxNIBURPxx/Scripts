@@ -5,7 +5,7 @@ Connect-MgGraph -Scopes "User.ReadWrite.All"
 
 # Import the CSV file
 # CSV formatted as DisplayName,UserPrincipalName,Password,MailNickname
-$users = Import-Csv -Path "C:\PathToCSVFile\AAD-Users.csv" # Change to your CSV file path
+$users = Import-Csv -Path "AAD-Users.csv" # Change to your CSV file path
 
 foreach ($user in $users) {
     $PasswordProfile = @{
@@ -15,7 +15,7 @@ foreach ($user in $users) {
 
     New-MgUser -DisplayName $user.DisplayName `
                -UserPrincipalName $user.UserPrincipalName `
-               -AccountEnabled $false `
+               -AccountEnabled:$true `
                -MailNickname $user.MailNickname `
                -PasswordProfile $PasswordProfile
 }
