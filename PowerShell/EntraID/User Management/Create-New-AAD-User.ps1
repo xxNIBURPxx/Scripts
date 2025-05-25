@@ -10,7 +10,7 @@ Connect-MgGraph -Scopes "User.ReadWrite.All"
 # Create new user
 New-MgUser -DisplayName "First Last" ` # Replace with actual name
            -UserPrincipalName "name@domain.com" ` # Replace with actual UPN
-           -AccountEnabled $true ` # Set to $false if you want to create a disabled user
+           -AccountEnabled:$true ` # Set to $false if you want to create a disabled user
            -MailNickname "name" ` # Replace with actual mail nickname
            -PasswordProfile @{Password = "YourP@ssword123"; ForceChangePasswordNextSignIn = $true} ` # Replace with actual password
            -UsageLocation "US" ` # Replace with actual usage location
