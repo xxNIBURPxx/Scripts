@@ -3,3 +3,6 @@ Uninstall-Module PnP.PowerShell -AllVersions -Force
 
 # Install PnP PowerShell
 Install-Module PnP.PowerShell -Force -Scope AllUsers
+
+# PnP App Registration
+Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant <tenantprefix>.onmicrosoft.com
